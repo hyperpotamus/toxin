@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":";;;AACA,aADA,QAAA,gBACAA,QAAQC,IAAI","file":"src.98aabca9.js","sourceRoot":"..\\src","sourcesContent":["import \"./index.scss\";\r\nconsole.log(\"Hello from pug.js\");\r\n"]}
