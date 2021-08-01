@@ -1,0 +1,1 @@
+{"version":3,"sources":["../index.js"],"names":["console","log"],"mappings":";;;;;AAEA,aAFA,QAAA,kBACA,QAAA,gBACAA,QAAQC,IAAI","file":"src.fb853f5f.js","sourceRoot":"..\\src\\pages","sourcesContent":["import \"./iconfont.css\";\r\nimport \"./index.scss\";\r\nconsole.log(\"Hello from pug.js\");\r\n"]}
