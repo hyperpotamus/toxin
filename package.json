@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel -p 4000 src/index.pug --open",
-    "build": "parcel build src/index.pug --public-url /toxin/"
+    "start": "parcel -p 4000 src/pages/*.pug --open",
+    "build": "parcel build src/pages/*.pug --public-url /toxin/"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,7 @@
     "pug": "^3.0.2",
     "sass": "^1.36.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "pages": "0.0.16"
+  }
 }
