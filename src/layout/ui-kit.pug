@@ -1,5 +1,9 @@
 extends base
-
+//- block style
+//-   include ui-kit.css
+append link
+  link(rel="stylesheet", href="../layout/ui-kit.css")
 block main
-  img(src="../icon/favicon.svg", alt="icon")
+  img.watermark(src="../img/watermark.svg", alt="icon")
   block content
+  script(src='../layout/ui-kit.js', type="text/javascript")

@@ -2,9 +2,13 @@ extends ../layout/base
 
 block title
   |Toxin
+
 block main
   h1.icon-twitter Toxin
-  a(href="./colors-and-type.pug") Colors & Type
+  ul
+    each value,index in {"Colors & Type" : "colors-and-type","Cards" : "cards", "Headers & Footers" : "headers-and-footers", "Form Elements" : "form-elements"}
+      li
+        a(href= "./" +value+".pug")= index
   p.
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit error dolorem reprehenderit minus eum neque in repellat debitis, delectus possimus quaerat molestias, nostrum ab obcaecati accusantium exercitationem fuga illum?
 
@@ -15,4 +19,3 @@ block main
     p.
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit error dolorem reprehenderit minus eum neque in repellat debitis, delectus possimus quaerat molestias, nostrum ab obcaecati accusantium exercitationem fuga illum?
 
-  script(src='../index.js', type="text/javascript")

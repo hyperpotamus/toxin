@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel -p 4000 src/pages/*.pug --open",
+    "start": "parcel -p 4000 src/pages/*.pug",
     "build": "parcel build src/pages/*.pug --public-url /toxin/",
     "deploy": "gh-pages -d dist -b dist"
   },
