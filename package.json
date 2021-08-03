@@ -25,6 +25,8 @@
     "sass": "^1.36.0"
   },
   "dependencies": {
-    "pages": "0.0.16"
+    "fonts": "0.0.2",
+    "pages": "0.0.16",
+    "zero.css": "0.0.0"
   }
 }

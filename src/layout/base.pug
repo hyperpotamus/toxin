@@ -6,13 +6,11 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title
       block title
-    style
-      block style
-    block link
-      link(rel="stylesheet", href="../zero.css")
-      link(rel="stylesheet", href="../iconfont.css")
-      link(rel="stylesheet", href="../index.scss")
+    block favicon
       link(rel="shortcut icon", href="../img/favicon.ico", type="image/x-icon")
+    block style
+      link(rel="stylesheet", href="../index.scss")
+    block script
+      script(src='../index.js', type="text/javascript")
   body
     block main
-    script(src='../index.js', type="text/javascript")

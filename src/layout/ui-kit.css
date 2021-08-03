@@ -1,3 +1,4 @@
+@import url("../index.scss");
 .watermark {
   position: absolute;
   width: 48px;

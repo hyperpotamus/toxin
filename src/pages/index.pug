@@ -5,8 +5,15 @@ block title
 
 block main
   h1.icon-twitter Toxin
+  -
+    var links = {
+      "Colors & Type" : "colors-and-type",
+      "Cards" : "cards",
+      "Headers & Footers" : "headers-and-footers",
+      "Form Elements" : "form-elements"
+    }
   ul
-    each value,index in {"Colors & Type" : "colors-and-type","Cards" : "cards", "Headers & Footers" : "headers-and-footers", "Form Elements" : "form-elements"}
+    each value,index in links
       li
         a(href= "./" +value+".pug")= index
   p.
