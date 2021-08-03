@@ -1,1 +1,0 @@
-{"version":3,"sources":["../layout/ui-kit.js"],"names":["console","log"],"mappings":";AACAA,QAAQC,IAAI","file":"ui-kit.250fa9b2.js","sourceRoot":"..\\src\\pages","sourcesContent":["// import \"../layout/ui-kit.css\";\r\nconsole.log(\"Hello from ui-kit.js\");\r\n"]}

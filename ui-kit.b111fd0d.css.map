@@ -1,1 +1,0 @@
-{"version":3,"sources":["ui-kit.css"],"names":[],"mappings":"AAAA,WACE,iBAAkB,CAClB,UAAW,CACX,WAAY,CACZ,SAAU,CACV,QACF","file":"ui-kit.b111fd0d.css","sourceRoot":"..\\src\\pages","sourcesContent":[".watermark {\r\n  position: absolute;\r\n  width: 48px;\r\n  height: 48px;\r\n  left: 30px;\r\n  top: 30px;\r\n}\r\n"]}
