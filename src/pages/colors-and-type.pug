@@ -1,11 +1,4 @@
 extends ../layout/ui-kit
-mixin color(n)
-  .color-box
-    .color-box__square
-    .color-box__description
-      p
-        b Dark Shade #{n}%
-      p #1F2041
 
 block title
   |Colors & Type
@@ -70,19 +63,19 @@ block content
         .font-box
           .font-box__type
             h2 H2
-          .font-box__description
+          .font-box__description.font-box__description_h2
             h2
               b.
                 Next one is the item title inside widgets
         .font-box
-          .font-box__type
+          .font-box__type.font-box__type_h3
             h3 H3
           .font-box__description.font-box__description_h3
             h3
               b.
                 This is a label or CTA text
         .font-box
-          .font-box__type
+          .font-box__type.font-box__type_body
             p Body
           .font-box__description.font-box__description_body
             p.
