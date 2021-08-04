@@ -1,11 +1,91 @@
 extends ../layout/ui-kit
+mixin color(n)
+  .color-box
+    .color-box__square
+    .color-box__description
+      p
+        b Dark Shade #{n}%
+      p #1F2041
 
 block title
   |Colors & Type
+block style
+  link(rel="stylesheet", href="./colors-and-type.css")
 
 block content
-  h1 Title
-  hr
-  p.
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
-    
+  .wrapper
+    .main.main__box
+      .main.main__column-color
+        .color-box
+          .color-box__square
+          .color-box__description
+            p
+              b Dark Shade 100%
+            p #1F2041
+        .color-box
+          .color-box__square.color-box__square_75
+          .color-box__description
+            p
+              b Dark Shade 75%
+            p #1F2041
+        .color-box
+          .color-box__square.color-box__square_50
+          .color-box__description
+            p
+              b Dark Shade 50%
+            p #1F2041
+        .color-box
+          .color-box__square.color-box__square_25
+          .color-box__description
+            p
+              b Dark Shade 25%
+            p #1F2041
+        .color-box
+          .color-box__square.color-box__square_5
+          .color-box__description
+            p
+              b Dark Shade 5%
+            p #1F2041
+        .color-box
+          .color-box__square.color-box__purple
+          .color-box__description
+            p
+              b Purple
+            p #BC9CFF
+        .color-box
+          .color-box__square.color-box__green
+          .color-box__description
+            p
+              b Green
+            p #6FCF97
+          
+      .main.main__column-font
+        .font-box
+          .font-box__type
+            h1 H1
+          .font-box__description
+            h1
+              b.
+                This one is the sub-section or widget title
+        .font-box
+          .font-box__type
+            h2 H2
+          .font-box__description
+            h2
+              b.
+                Next one is the item title inside widgets
+        .font-box
+          .font-box__type
+            h3 H3
+          .font-box__description.font-box__description_h3
+            h3
+              b.
+                This is a label or CTA text
+        .font-box
+          .font-box__type
+            p Body
+          .font-box__description.font-box__description_body
+            p.
+              This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+

@@ -4,9 +4,8 @@
 //Default font
 $fontFamily: "montserrat";
 
-$color_h1: tomato;
-h1 {
-  color: $color_h1;
+.main {
+  font-family: $fontFamily;
 }
 .text-block {
   font-family: $fontFamily;
