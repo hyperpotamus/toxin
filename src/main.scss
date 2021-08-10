@@ -1,7 +1,8 @@
-@import url("./zero.css");
-@import url("./fonts/montserrat/monsterrat.css");
-@import url("./fonts/iconfont/iconfont.css");
-//Default font
+@use "../zero.css";
+@use "../fonts/iconfont/iconfont.scss";
+@use "../fonts/type.css";
+@use "fonts/montserrat/montserrat.scss";
+
 $fontFamily: "montserrat";
 
 .main {

@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel -p 4000 src/pages/*.pug",
-    "build": "parcel build src/pages/*.pug --public-url /toxin/",
+    "build": "del-cli dist && parcel build src/pages/*.pug --public-url /toxin/",
     "deploy": "gh-pages -d dist -b dist"
   },
   "repository": {
@@ -19,14 +19,14 @@
   },
   "homepage": "https://github.com/hyperpotamus/toxin#readme",
   "devDependencies": {
+    "del-cli": "^4.0.1",
     "gh-pages": "^3.2.3",
     "parcel-bundler": "^1.12.5",
     "pug": "^3.0.2",
     "sass": "^1.36.0"
   },
   "dependencies": {
-    "fonts": "0.0.2",
-    "pages": "0.0.16",
-    "zero.css": "0.0.0"
+    "item-quantity-dropdown": "^2.1.0",
+    "jquery": "^3.6.0"
   }
 }

@@ -1,0 +1,26 @@
+.input-string {
+  // border: 1px;
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  // color: rgba(31, 32, 65, 0.25);
+  // flex: 0 1 320px;
+  display: block;
+  width: 100%;
+  height: 44px;
+  padding-left: 15px;
+}
+.input-string::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  opacity: 1;
+}
+.input-string:hover,
+.input-string:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  opacity: 1;
+}
+.input-string:hover::placeholder,
+.input-string:focus::placeholder {
+  color: rgba(31, 32, 65, 0.75);
+  opacity: 1;
+}

@@ -1,5 +1,6 @@
-@import url(../layout/ui-kit.css);
-@import url(../fonts/type.css);
+@use "../layout/ui-kit.scss";
+@use "../color.scss";
+
 .wrapper {
   /* text-align: center; */
 }
@@ -52,7 +53,8 @@
   /* line-height: 27.79px; */
   /* vertical-align: middle; */
   margin-left: 29px;
-  color: rgba(31, 32, 65, 1);
+  // color: rgba(31, 32, 65, 1);
+  color: color.$dark_100;
 }
 .font-box__description_h2 {
   /* margin-top: 1px; */
@@ -64,36 +66,46 @@
 }
 .font-box__description_body {
   margin-top: -5px;
-  color: rgba(31, 32, 65, 0.75);
+  // color: rgba(31, 32, 65, 0.75);
+  color: color.$dark_75;
   flex-basis: 310px;
 }
 .color-box__square {
   width: 70px;
   height: 70px;
-  background: #1f2041;
+  // background: rgba(31, 32, 65, 1);
+  background: color.$dark_100;
+
   border-radius: 6px;
 }
 
 .font-box__type {
-  color: rgba(31, 32, 65, 0.25);
+  // color: rgba(31, 32, 65, 0.25);
+  color: color.$dark_25;
 }
 .color-box__square_75 {
-  background: rgba(31, 32, 65, 0.75);
+  // background: rgba(31, 32, 65, 0.75);
+  background: color.$dark_75;
 }
 .color-box__square_50 {
-  background: rgba(31, 32, 65, 0.5);
+  // background: rgba(31, 32, 65, 0.5);
+  background: color.$dark_50;
 }
 .color-box__square_25 {
-  background: rgba(31, 32, 65, 0.25);
+  // background: rgba(31, 32, 65, 0.25);
+  background: color.$dark_25;
 }
 .color-box__square_5 {
-  background: rgba(31, 32, 65, 0.05);
+  // background: rgba(31, 32, 65, 0.05);
+  background: color.$dark_5;
 }
 .color-box__purple {
-  background: rgba(188, 156, 255, 1);
+  // background: rgba(188, 156, 255, 1);
+  background: color.$primary;
 }
 .color-box__green {
-  background: rgba(111, 207, 151, 1);
+  // background: rgba(111, 207, 151, 1);
+  background: color.$secondary;
 }
 
 .color-box__description {
