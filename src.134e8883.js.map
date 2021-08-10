@@ -1,1 +1,0 @@
-{"version":3,"sources":["../index.js"],"names":["console","log"],"mappings":";AAGAA,QAAQC,IAAI","file":"src.134e8883.js","sourceRoot":"..\\src\\pages","sourcesContent":["// import \"./zero.css\";\r\n// import \"./iconfont.css\";\r\n// import \"./index.scss\";\r\nconsole.log(\"Hello from pug.js\");\r\n// var a = require(\"./pages/cards.pug\");\r\n// console.log(a);\r\n"]}
