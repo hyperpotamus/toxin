@@ -1,7 +1,8 @@
 import "../index.js";
-// import $ from "jquery";
-var $ = require("jquery");
-var jQuery = require("jquery");
+import $ from "jquery";
+globalThis.jQuery = $;
+// var $ = require("jquery");
+// var jQuery = require("jquery");
 // import jQuery from "jquery";
 // import { $, jQuery } from "jquery";
 // window.$ = $;
@@ -14,10 +15,10 @@ var jQuery = require("jquery");
 // $.getScript(
 //   "../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js"
 // );
-// require("../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js");
+require("../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js");
 $(document).ready(() => {
-  // $(".iqdropdown").iqDropdown();
+  $(".iqdropdown").iqDropdown();
   console.log("document ready");
   // $(".iqdropdown").iqDropdown();
-  // $(".no-config").iqDropdown();
+  $(".no-config").iqDropdown();
 });
