@@ -1,19 +1,31 @@
-$font-path: "../fonts";
+$font-path: "../fonts/montserrat/";
+/* montserrat-regular - latin_cyrillic */
 @font-face {
-  font-family: "montserrat";
-  src: local("☺"),
-    url("#{$font-path}/montserrat/montserrat.woff") format("woff"),
-    url("#{$font-path}/montserrat/montserrat.ttf") format("truetype"),
-    url("#{$font-path}/montserrat/montserrat.svg") format("svg");
-  font-weight: normal;
+  font-family: "Montserrat";
   font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("#{$font-path}montserrat-v18-latin_cyrillic-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("#{$font-path}montserrat-v18-latin_cyrillic-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("#{$font-path}montserrat-v18-latin_cyrillic-regular.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
 }
+
+/* montserrat-700 - latin_cyrillic */
 @font-face {
-  font-family: "montserrat";
-  src: local("☺"),
-    url("#{$font-path}/montserrat/montserrat_bold.woff") format("woff"),
-    url("#{$font-path}/montserrat/montserrat_bold.ttf") format("truetype"),
-    url("#{$font-path}/montserrat/montserrat_bold.svg") format("svg");
-  font-weight: 700;
+  font-family: "Montserrat";
   font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("#{$font-path}montserrat-v18-latin_cyrillic-700.woff") format("woff"),
+    /* Modern Browsers */
+      url("#{$font-path}montserrat-v18-latin_cyrillic-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("#{$font-path}montserrat-v18-latin_cyrillic-700.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
 }

@@ -1,0 +1,33 @@
+include __button/dropdown__button
+mixin menu-option(caption)
+  .dropdown__menu-option
+    h3 #{caption}
+    .dropdown__menu-option-controls
+      +dropdown__button(false)
+      h3 0
+      +dropdown__button(true)
+mixin dropdown
+  .dropown.dropdown_opened
+    p.dropdown__selection Сколько гостей
+    p.icon-expand_more.dropdown__selection_arrow
+    .dropdown__menu
+      +menu-option("взрослые")
+      +menu-option("дети")
+      +menu-option("младенцы")
+      .dropdown__menu-controls
+        h3.dropdown__menu-clear очистить
+        h3.dropdown__menu-apply применить
+  //-   p.iqdropdown-selection
+  //-   .iqdropdown-menu
+  //-     .iqdropdown-menu-option(data-id="item1")
+  //-       div
+  //-         h3.iqdropdown-item взрослые
+  //-         //- p.iqdropdown-description A short description
+  //-     .iqdropdown-menu-option(data-id="item2")
+  //-       div
+  //-         h3.iqdropdown-item дети
+  //-         //- p.iqdropdown-description A short description
+  //-     .iqdropdown-menu-option(data-id="item3")
+  //-       div
+  //-         h3.iqdropdown-item младенцы
+  //-         //- p.iqdropdown-description A short description

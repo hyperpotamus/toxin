@@ -1,12 +1,16 @@
-@import url("../layout/ui-kit.scss");
-@import url("./blocks/input-string/input-string.scss");
-@import url("item-quantity-dropdown/lib/item-quantity-dropdown.min.css");
+@use "../layout/ui-kit.scss";
+@use "./blocks/input-string/input-string.scss";
+@use "item-quantity-dropdown/lib/item-quantity-dropdown.min.css";
+// @use './blocks/iqdropdown/iqdropdown';
+@use './blocks/dropdown/dropdown';
+
 .form-elements__box {
   margin-top: 143px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .form-elements__column {
   max-width: 320px;
 }

@@ -1,5 +1,5 @@
 extends ../layout/ui-kit
-
+include blocks/dropdown/dropdown
 block title
   |Form Elements
 
@@ -35,19 +35,9 @@ block content
           .element-box__caption_right
             h3 
         .element-box__body 
-          .iqdropdown
-            p.iqdropdown-selection
-            .iqdropdown-menu
-              .iqdropdown-menu-option(data-id="item1")
-                div
-                  p.iqdropdown-item Item 
-                  p.iqdropdown-description A short description
-              .iqdropdown-menu-option(data-id="item2")
-                div
-                  p.iqdropdown-item Item 
-                  p.iqdropdown-description A short description
+          +dropdown
       p.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
+        Русские буквы Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
     .form-elements__column
       p.
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
