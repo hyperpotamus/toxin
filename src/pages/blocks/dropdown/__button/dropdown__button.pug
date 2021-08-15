@@ -1,6 +1,13 @@
-mixin dropdown__button(increment)
-  .dropdown__button
-    if increment
-      p +
-    else
-      p -
+mixin dropdown__button(increment,disabled)
+  if disabled
+    button.dropdown__button(disabled)
+      if increment
+        p +
+      else
+        p -
+  else
+    button.dropdown__button
+      if increment
+        p +
+      else
+        p -

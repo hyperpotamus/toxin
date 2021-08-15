@@ -4,14 +4,13 @@
 
 $height: 44px;
 .dropdown {
-  align-items: center;
   border: 1px solid color.$dark_25;
   border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  height: $height;
-  justify-content: space-between;
-  padding: 0 15px;
+  // display: flex;
+  height: 100%;
+  // height: $height;
+  // justify-content: space-between;
+  // padding: 0 15px;
   position: relative;
   width: 100%;
 }
@@ -22,10 +21,17 @@ $height: 44px;
 .dropdown__selection {
   color: color.$dark_75;
   font-family: "Montserrat";
+  cursor: pointer;
+  align-items: center;
+  height: 100%;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+
+  // flex: 1;
   position: relative;
 }
 .dropdown__selection_arrow {
@@ -38,12 +44,10 @@ $height: 44px;
   // border-radius: 4px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  // border-bottom: none;
   cursor: default;
-  // display: none;
+  display: none;
   left: 0;
   margin: -2px -1px 0;
-  // margin: 0;
   position: absolute;
   right: 0;
   top: $height;
@@ -73,7 +77,11 @@ $height: 44px;
   justify-content: space-between;
   // margin-bottom: 5px;
 }
-.dropdown__menu-clear {
+.dropdown__button-clear {
+  color: inherit;
+  background-color: #ffffff;
 }
-.dropdown__menu-apply {
+.dropdown__button-apply {
+  color: inherit;
+  background-color: #ffffff;
 }

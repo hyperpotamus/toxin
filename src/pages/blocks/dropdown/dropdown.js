@@ -2,32 +2,91 @@ export class Dropdown {
   constructor(node) {
     // this.values = values;
     this.node = node;
+    this.fields = [];
+    this.decrementButtons = [];
     // console.log(typeof node);
+
     const items = node.querySelectorAll(".dropdown__menu-option-controls");
+    const buttonClear = node.querySelector(".dropdown__button-clear");
+    const buttonApply = node.querySelector(".dropdown__button-apply");
+    this.menu = node.querySelector(".dropdown__menu");
+    this.selection = node.querySelector(".dropdown__selection");
+    this.arrow = node.querySelector(".dropdown__selection_arrow");
+    this.result = node.querySelector(".dropdown__result");
+    this.selection.onclick = () => {
+      // console.log(this.menu.style.display);
+      if (this.menu.style.display == "" || this.menu.style.display == "none") {
+        this.arrow.classList.remove("icon-expand_more");
+        this.arrow.classList.add("icon-expand_less");
+        this.menu.style.display = "block";
+        this.node.style.borderBottomLeftRadius = "0";
+        this.node.style.borderBottomRightRadius = "0";
+      } else {
+        this.arrow.classList.add("icon-expand_more");
+        this.arrow.classList.remove("icon-expand_less");
+        this.menu.style.display = "none";
+        this.node.style.borderBottomLeftRadius = "4px";
+        this.node.style.borderBottomRightRadius = "4px";
+      }
+    };
     for (const item of items) {
       // for (let i = 0, len = items.length; i < len; i++) {
       //   let item = items[i];
       const buttons = item.querySelectorAll(".dropdown__button");
       const field = item.querySelector("h3");
+      this.fields.push(field);
       const value = parseInt(field.textContent);
+      let incrementButton, decrementButton;
       for (const button of buttons) {
         const sign = button.querySelector("p").textContent;
         if (sign == "+") {
-          button.onclick = () => {
-            const myField = field;
-            let value = parseInt(myField.textContent);
-            value++;
-            myField.textContent = value;
-          };
+          incrementButton = button;
         } else {
-          button.onclick = () => {
-            const myField = field;
-            let value = parseInt(myField.textContent);
-            value--;
-            myField.textContent = value;
-          };
+          decrementButton = button;
         }
       }
+      this.decrementButtons.push(decrementButton);
+      incrementButton.onclick = () => {
+        const myField = field;
+        const decr = decrementButton;
+        let value = parseInt(myField.textContent);
+        value++;
+        decr.removeAttribute("disabled");
+        myField.textContent = value;
+      };
+      decrementButton.onclick = () => {
+        const me = decrementButton;
+        const myField = field;
+        let value = parseInt(myField.textContent);
+        value--;
+        if (value <= 0) {
+          me.setAttribute("disabled", "");
+        }
+        if (value >= 0) {
+          myField.textContent = value;
+        }
+      };
+      buttonClear.onclick = () => {
+        for (const field of this.fields) {
+          field.textContent = "0";
+        }
+        for (const button of this.decrementButtons) {
+          button.setAttribute("disabled", "");
+        }
+        this.result.textContent = "Сколько гостей";
+      };
+      buttonApply.onclick = () => {
+        let sum = 0;
+        for (const field of this.fields) {
+          sum += parseInt(field.textContent);
+        }
+        // console.log(sum);
+        const str = (sum % 10 == 1 && sum != 11) ? " гость" :
+        sum % 10 < 5 && sum % 10 > 1 && (sum > 14 || sum < 11)
+        ? " гостя" : " гостей";
+        // console.log(str);
+        this.result.textContent = String(sum) + str;
+      };
     }
   }
   get total() {

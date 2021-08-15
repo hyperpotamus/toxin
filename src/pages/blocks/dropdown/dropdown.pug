@@ -3,20 +3,23 @@ mixin menu-option(caption)
   .dropdown__menu-option
     h3 #{caption}
     .dropdown__menu-option-controls
-      +dropdown__button(false)
+      +dropdown__button(false,true)
       h3 0
-      +dropdown__button(true)
+      +dropdown__button(true,false)
 mixin dropdown
-  .dropdown.dropdown_opened
-    p.dropdown__selection Сколько гостей
-    p.icon-expand_more.dropdown__selection_arrow
+  .dropdown
+    .dropdown__selection
+      p.dropdown__result Сколько гостей
+      p.icon-expand_more.dropdown__selection_arrow
     .dropdown__menu
       +menu-option("взрослые")
       +menu-option("дети")
       +menu-option("младенцы")
       .dropdown__menu-controls
-        h3.dropdown__menu-clear очистить
-        h3.dropdown__menu-apply применить
+        button.dropdown__button-clear
+          h3.dropdown__menu-clear очистить
+        button.dropdown__button-apply
+          h3.dropdown__menu-apply применить
   //-   p.iqdropdown-selection
   //-   .iqdropdown-menu
   //-     .iqdropdown-menu-option(data-id="item1")
