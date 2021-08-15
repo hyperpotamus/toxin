@@ -6,9 +6,9 @@ block title
 block style
   link(rel="stylesheet", href="./form-elements.scss")
 block script
-  script(src="./form-elements.js", type="text/javascript")
+  script(src="./form-elements.js", type="module")
+  //- script(src="./form-elements.js", type="text/javascript")
   //- script(src="../../node_modules/jquery/dist/jquery.min.js", type="text/javascript") 
-  //- script(src="../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js", type="text/javascript") 
 block content
   .form-elements__box
     .form-elements__column
@@ -36,6 +36,16 @@ block content
             h3 
         .element-box__body 
           +dropdown
+      .element-box 
+        .element-box__caption
+          .element-box__caption_left
+            h3 masked text field
+          .element-box__caption_right
+            h3 
+        .element-box__body 
+          input.input-date(type="date",placeholder="ДД.ММ.ГГГГ")
+
+  
       p.
         Русские буквы Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
     .form-elements__column

@@ -56,8 +56,9 @@
   // color: rgba(31, 32, 65, 1);
   color: color.$dark_100;
 }
-.font-box__description_h2 {
-  /* margin-top: 1px; */
+.font-box__description_h2 { 
+  padding-top: 1px;
+  padding-left: 2px;
 }
 
 .font-box__description_h3 {
@@ -113,10 +114,10 @@
   flex-basis: 171px;
   flex-grow: 0;
   flex-shrink: 1;
-  font-size: 19.7px;
+  font-size: 19px;
   line-height: 27.79px;
   /* vertical-align: middle; */
-  margin-left: 40px;
+  margin-left: 39px;
   /* display: flex;
   justify-content: center; */
   padding: 9px 0 0 0;

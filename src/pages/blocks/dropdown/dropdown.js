@@ -13,18 +13,23 @@ export class Dropdown {
     this.selection = node.querySelector(".dropdown__selection");
     this.arrow = node.querySelector(".dropdown__selection_arrow");
     this.result = node.querySelector(".dropdown__result");
+    // this.buttonClear = node.querySelector(".dropdown__button-clear");
+    this.menuClear = node.querySelector(".dropdown__menu-clear");
     this.selection.onclick = () => {
       // console.log(this.menu.style.display);
-      if (this.menu.style.display == "" || this.menu.style.display == "none") {
+      // if (this.menu.style.display == "" || this.menu.style.display == "none") {
+      if (this.menu.classList.contains("hidden")) {
         this.arrow.classList.remove("icon-expand_more");
         this.arrow.classList.add("icon-expand_less");
-        this.menu.style.display = "block";
+        // this.menu.style.display = "block";
+        this.menu.classList.remove("hidden")
         this.node.style.borderBottomLeftRadius = "0";
         this.node.style.borderBottomRightRadius = "0";
       } else {
         this.arrow.classList.add("icon-expand_more");
         this.arrow.classList.remove("icon-expand_less");
-        this.menu.style.display = "none";
+        this.menu.classList.add("hidden")
+        // this.menu.style.display = "none";
         this.node.style.borderBottomLeftRadius = "4px";
         this.node.style.borderBottomRightRadius = "4px";
       }
@@ -53,6 +58,7 @@ export class Dropdown {
         value++;
         decr.removeAttribute("disabled");
         myField.textContent = value;
+        this.menuClear.classList.remove("hidden");
       };
       decrementButton.onclick = () => {
         const me = decrementButton;
@@ -65,6 +71,14 @@ export class Dropdown {
         if (value >= 0) {
           myField.textContent = value;
         }
+        let sum = 0;
+        for (const field of this.fields) {
+          sum += parseInt(field.textContent);
+        }
+        if (sum==0) {
+          this.menuClear.classList.add("hidden");
+          this.result.textContent = "Сколько гостей";
+        }
       };
       buttonClear.onclick = () => {
         for (const field of this.fields) {
@@ -74,6 +88,7 @@ export class Dropdown {
           button.setAttribute("disabled", "");
         }
         this.result.textContent = "Сколько гостей";
+        this.menuClear.classList.add("hidden");
       };
       buttonApply.onclick = () => {
         let sum = 0;
@@ -85,7 +100,13 @@ export class Dropdown {
         sum % 10 < 5 && sum % 10 > 1 && (sum > 14 || sum < 11)
         ? " гостя" : " гостей";
         // console.log(str);
-        this.result.textContent = String(sum) + str;
+        if (sum==0) {
+          // this.menuClear.classList.add("hidden");
+          this.result.textContent = "Сколько гостей";
+        }
+        else {
+          this.result.textContent = String(sum) + str;
+        }
       };
     }
   }
