@@ -43,15 +43,44 @@ block content
           .element-box__caption_right
             h3 
         .element-box__body 
-          input.input-date(type="date",placeholder="ДД.ММ.ГГГГ")
+          input.input-string(type="text",placeholder="ДД.ММ.ГГГГ",pattern="\d\d\.\d\d\.\d{4}")
+      .two-elements-box
+        .element-box-50
+          .element-box__caption_left
+            h3 date Dropdown
+          .element-box__body
+            .date-dropdown
+              .date-dropdown__selection
+                input.date-dropdown__input.datepicker-here(type="text",placeholder="ДД.ММ.ГГГГ",pattern="\d\d\.\d\d\.\d{4}")
+                p.icon-expand_more.date-dropdown__selection_arrow
+        .element-box-50
+          .element-box__caption_left
+            h3 date Dropdown
+          .element-box__body
+            .date-dropdown
+              .date-dropdown__selection
+                input.date-dropdown__input(type="text",placeholder="ДД.ММ.ГГГГ",pattern="\d\d\.\d\d\.\d{4}",value="19-08-2019")
+                p.icon-expand_more.date-dropdown__selection_arrow
+      .element-box-266px
+        .element-box__caption_left
+          h3 filter date dropdown
+        .element-box__body
+          .date-dropdown
+            .date-dropdown__selection
+              p 19 авг - 23 авг
+              p.icon-expand_more.date-dropdown__selection_arrow
+          //- input.input-string(type="text",placeholder="19 авг - 23 авг")
+      .element-box-266px
+        .element-box__caption_left
+          h3 subscription text field
+        .element-box__body
+          input.input-string(type="emil",placeholder="Email",pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
 
-  
       p.
         Русские буквы Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
     .form-elements__column
       p.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
-
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore assumenda nostrum odit recusandae ipsam maxime. Sapiente repellendus, provident vitae quae nobis distinctio veniam possimus debitis mollitia, quam consequuntur rerum laudantium atque quaerat corporis iste non nam placeat est expedita fugiat! Eaque voluptates deserunt odio deleniti, adipisci natus fugit distinctio ab fugiat quasi vero velit est magni excepturi quae quas quisquam saepe! Possimus, accusantium laboriosam voluptas laborum harum alias velit culpa! Architecto neque, fugit ipsam pariatur quae ab nihil quos consequuntur enim atque cupiditate repellat illo, sint deserunt eum! Consequatur deserunt sint, voluptate, illo ducimus incidunt laboriosam eum aliquam enim, architecto laborum aut ipsa eos at earum. Quod excepturi a est porro velit, expedita culpa reiciendis sunt natus eligendi repellendus dicta deserunt odio. Pariatur assumenda ipsa alias repellendus magnam deserunt quae enim eum eveniet in. Ea tempora laudantium nesciunt consectetur ab vero dignissimos eaque ducimus? Eos, perferendis voluptatem dicta dolor voluptas repellat ut dignissimos libero vitae ipsam in totam consequatur obcaecati, quam sunt facere, possimus cupiditate magni sequi ratione cum. Temporibus excepturi exercitationem, soluta, commodi quia sit natus molestiae fugit quos modi ut saepe nulla, id beatae tempora! Nobis, fugiat aliquam aut facilis dolore fuga voluptates iste deserunt reprehenderit dolorum cupiditate.
     .form-elements__column
       p.
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.

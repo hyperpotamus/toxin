@@ -1,8 +1,13 @@
+@use "../color.scss";
 @use "../layout/ui-kit.scss";
 @use "./blocks/input-string/input-string.scss";
-@use "item-quantity-dropdown/lib/item-quantity-dropdown.min.css";
+// @use "item-quantity-dropdown/lib/item-quantity-dropdown.min.css";
 // @use './blocks/iqdropdown/iqdropdown';
 @use './blocks/dropdown/dropdown';
+@use '../fonts/iconfont/iconfont.scss';
+@use "air-datepicker/dist/css/datepicker.css";
+
+$height: 44px;
 
 .form-elements__box {
   margin-top: 143px;
@@ -19,32 +24,83 @@
 .element-box {
   margin-bottom: 20px;
 }
+.element-box-266px {
+  margin-top: 40px;
+  width: 266px;
+}
+
+.two-elements-box {
+  margin-top: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.element-box-50 {
+  // margin-bottom: 20px;
+  // flex: 0 1 30;
+  // flex-basis: 100px;
+  width: 150px;
+  // height: 44px;
+  // display: block;
+}
 .element-box__caption {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
 }
 .element-box__caption_left {
-  color: rgba(31, 32, 65, 1);
+  color: color.$dark_100;
+  margin-bottom: 5px;
 }
 .element-box__caption_right {
-  color: rgba(31, 32, 65, 0.5);
+  color: color.$dark_50;
 }
 .element-box__body {
-  height: 44px;
+  height: $height;
   // display: flex;
 }
-.input-date{
-  text-transform: uppercase;
+.date-dropdown {
+  // text-transform: uppercase;
   background: #ffffff;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid color.$dark_25;
   border-radius: 4px;
-  // color: rgba(31, 32, 65, 0.25);
+  color: color.$dark_75;
   // flex: 0 1 320px;
-  display: block;
+  // display: block;
+  // flex: 0 1 100%;
   width: 100%;
+  // opacity: 0;
   // height: 44px;
   height: 100%;
-  padding-left: 13px;
+  // padding-left: 13px;
 }
 
+.date-dropdown__selection {
+  color: color.$dark_75;
+  font-family: "Montserrat";
+  cursor: pointer;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 15px;
+
+  // flex: 1;
+  position: relative;
+}
+.date-dropdown__selection_arrow {
+  color: color.$dark_50;
+  // padding-top: 1px;
+  font-size: 13px;
+}
+.date-dropdown__input {
+  color: color.$dark_75;
+  max-width: 90px;
+  display: inline;
+}

@@ -1,5 +1,13 @@
 import "../index.js";
 import { Dropdown } from "./blocks/dropdown/dropdown.js";
+import $ from "jquery";
+// globalThis.jQuery = $;
+globalThis.$ = $;
+// window.$ = window.jQuery = $;
+// window.$ = $;
+require('air-datepicker');
+
+// import "air-datepicker/dist/js/datepicker.js"
 
 // console.log("Hello from module");
 const node = document.querySelector(".dropdown");

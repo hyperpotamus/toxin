@@ -11,13 +11,13 @@ mixin dropdown
     .dropdown__selection
       p.dropdown__result Сколько гостей
       p.icon-expand_more.dropdown__selection_arrow
-    .dropdown__menu.hidden
+    .dropdown__menu.dropdown__menu_hidden
       +menu-option("взрослые")
       +menu-option("дети")
       +menu-option("младенцы")
       .dropdown__menu-controls
         button.dropdown__button-clear
-          h3.dropdown__menu-clear.hidden очистить
+          h3.dropdown__menu-clear.dropdown__button-clear_hidden очистить
         button.dropdown__button-apply
           h3.dropdown__menu-apply применить
     

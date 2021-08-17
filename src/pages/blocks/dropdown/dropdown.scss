@@ -3,6 +3,7 @@
 @use '../../../fonts/iconfont/iconfont.scss';
 
 $height: 44px;
+
 .dropdown {
   border: 1px solid color.$dark_25;
   border-radius: 4px;
@@ -35,6 +36,7 @@ $height: 44px;
   position: relative;
 }
 .dropdown__selection_arrow {
+  color: color.$dark_50;
   padding-top: 1px;
   font-size: 13px;
 }
@@ -54,7 +56,9 @@ $height: 44px;
   top: $height;
   z-index: 99999;
 }
-
+.dropdown__menu_hidden {
+  display: none;
+}
 .dropdown__menu-option {
   align-items: center;
   display: flex;
@@ -70,7 +74,8 @@ $height: 44px;
 }
 .dropdown__menu-controls {
   align-items: center;
-  height: 45px;
+  // height: 45px;
+  height: $height + 1px;
   padding: 9px 6px 0px 13px;
   // padding-top: 18px;
   color: color.$primary;
@@ -83,10 +88,10 @@ $height: 44px;
   display: inline;
   background-color: #ffffff;
 }
+.dropdown__button-clear_hidden {
+  display: none;
+}
 .dropdown__button-apply {
   color: inherit;
   background-color: #ffffff;
-}
-.hidden {
-  display: none;
 }
