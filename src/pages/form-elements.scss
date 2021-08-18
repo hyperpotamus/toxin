@@ -104,3 +104,7 @@ $height: 44px;
   max-width: 90px;
   display: inline;
 }
+.date-dropdown-filter__input {
+  color: color.$dark_75;
+  text-transform: lowercase;
+}

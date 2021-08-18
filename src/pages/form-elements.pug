@@ -51,7 +51,8 @@ block content
           .element-box__body
             .date-dropdown
               .date-dropdown__selection
-                input.date-dropdown__input.datepicker-here(type="text",placeholder="ДД.ММ.ГГГГ",pattern="\d\d\.\d\d\.\d{4}")
+                //- .datepicker-here
+                input.date-dropdown__input(type="text",id="datepicker",placeholder="ДД.ММ.ГГГГ",pattern="\d\d\.\d\d\.\d{4}")
                 p.icon-expand_more.date-dropdown__selection_arrow
         .element-box-50
           .element-box__caption_left
@@ -67,7 +68,8 @@ block content
         .element-box__body
           .date-dropdown
             .date-dropdown__selection
-              p 19 авг - 23 авг
+              input.date-dropdown-filter__input(type="text",value="19 авг - 23 авг")
+              //- p 19 авг - 23 авг
               p.icon-expand_more.date-dropdown__selection_arrow
           //- input.input-string(type="text",placeholder="19 авг - 23 авг")
       .element-box-266px

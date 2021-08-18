@@ -6,8 +6,41 @@ globalThis.$ = $;
 // window.$ = window.jQuery = $;
 // window.$ = $;
 require('air-datepicker');
-
 // import "air-datepicker/dist/js/datepicker.js"
+
+const $dates = $(".two-elements-box .date-dropdown__input");
+// const $dateArrows = $(".two-elements-box .date-dropdown__selection_arrow");
+const $dateArrows = $(".two-elements-box .date-dropdown__selection");
+const $altDates = $(".element-box-266px .date-dropdown__selection input");
+
+// console.log($dates.length);
+
+const $dateFrom = $dates.eq(0);
+const $dateTo = $dates.eq(1);
+const myDatepicker = $dateFrom.datepicker({
+  // todayButton: new Date(),
+  minDate: new Date(),
+  onSelect: function (fd, d, picker) { 
+    $dateFrom.val(fd.split(" - ")[0]);
+    $dateTo.val(fd.split(" - " )[1]);
+  },
+  dateFormat: "dd-mm-yyyy",
+  altFieldDateFormat: "dd M",
+  altField: $altDates,
+  clearButton: true,
+  range: true,
+  multipleDatesSeparator: " - "
+}).data('datepicker');
+
+$dateArrows.each(function( index, element ) {
+  $( this ).on("click",function() { myDatepicker.show();});
+}); 
+
+// myDatepicker.show();
+
+// $( function() {
+//   $dateFrom.datepicker();
+// } );
 
 // console.log("Hello from module");
 const node = document.querySelector(".dropdown");
