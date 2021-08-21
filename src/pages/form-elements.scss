@@ -24,6 +24,10 @@ $height: 44px;
 .element-box {
   margin-bottom: 20px;
 }
+.element-box_width_200 {
+  margin-bottom: 20px;
+  max-width: 200px;
+}
 .element-box-266px {
   margin-top: 40px;
   width: 266px;
@@ -147,19 +151,20 @@ position: relative;
   position: absolute;
   color: #fff;
   left: 5px;
-  top: 5px;
-  font-size: 10px;
+  top: 4px;
+  font-size: 10.5px;
 }
 
 .input-checkbox:checked + .checkbox-label-content::before {
   // color: color.$primary;
 
-  // Grdient
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  // Gradient
+  // background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: -webkit-gradient(linear, right top, left bottom, from(#BC9CFF), to(#8BA4F9));
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: initial;
-
 }
 
 .checkbox-label-content {
@@ -167,4 +172,64 @@ position: relative;
   color: color.$dark_50;
   max-width: 220px;
   line-height: 18px;
+}
+
+// Radio
+
+.radio-list {
+    display: flex;
+    // flex-direction: row;
+    padding-top: 11px;
+    width: 100%;
+    justify-content: space-between;
+}
+.input-radio {
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  -o-appearance:none;
+  border: 1px solid color.$dark_25;
+box-sizing: border-box;
+border-radius: 50%;
+width: 20px;
+height: 20px;
+color: #fff;
+position: relative;
+// padding-top: 2px;
+}
+
+.radio-label {
+  display: flex;
+  align-items:flex-start;
+  position: relative;
+  margin-bottom: 11px;
+}
+.radio-label-content {
+  padding-left: 10px;
+  padding-right: 20px;
+  color: color.$dark_50;
+  // max-width: 220px;
+  line-height: 18px;
+}
+.radio-label-content::before {
+  position: absolute;
+  // color: #fff;
+  left: 4px;
+  top: 4px;
+  // right: 3px;
+  // bottom: 3px;
+  width: 12px;
+  height: 12px;
+  content: '';
+  // font-size: 10.5px;
+  // display: inline;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.input-radio:checked + .radio-label-content::before {
+  // color: color.$primary;
+  // Gradient
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.input-radio:checked + .radio-label-content {
+  color: color.$dark_75;
 }
