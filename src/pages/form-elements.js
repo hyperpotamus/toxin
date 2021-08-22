@@ -1,10 +1,17 @@
 import "../index.js";
 import { Dropdown } from "./blocks/dropdown/dropdown.js";
+import { RateButton } from "./blocks/rate-button/rate-button.js";
 import $ from "jquery";
 // globalThis.jQuery = $;
 globalThis.$ = $;
 // window.$ = window.jQuery = $;
 // window.$ = $;
+
+
+
+
+
+
 require('air-datepicker');
 // import "air-datepicker/dist/js/datepicker.js"
 
@@ -87,6 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // const node = document.querySelector(".dropdown");
   // let myDropdown = new Dropdown(node);
 });
+
+//Rate buttons
+let myRates=[];
+const rates = document.querySelectorAll(".rate-button");
+rates.forEach ( (node)=>{
+  myRates.push(new RateButton(node));
+} );
+
+
 
 // import $ from "jquery";
 // globalThis.jQuery = $;

@@ -7,6 +7,7 @@
 @use '../fonts/iconfont/iconfont.scss';
 @use "air-datepicker/dist/css/datepicker.css";
 @use "./blocks/datepicker/datepicker-toxin.scss";
+@use "./blocks/rate-button/rate-button.scss";
 $height: 44px;
 
 .form-elements__box {
@@ -353,8 +354,6 @@ width: 40px;
 height: 20px;
 color: #fff;
 margin-right: 10px;
-// position: relative;
-// padding-top: 2px;
 }
 .input-like:checked {
   border-color: color.$primary;
@@ -386,8 +385,9 @@ margin-right: 10px;
   font-family: iconfont;
   content: '\e903';
   // Gradient
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
   // background: -webkit-gradient(linear, right top, left bottom, from(#BC9CFF), to(#8BA4F9));
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: initial;
@@ -404,4 +404,14 @@ margin-right: 10px;
 }
 .input-like:checked + .like-label-content {
   color: color.$primary;
+}
+
+// Rate
+
+.rate-list {
+  display: flex;
+  flex-direction: row;
+  padding-top: 11px;
+  width: 260px;
+  justify-content: space-between;  
 }
