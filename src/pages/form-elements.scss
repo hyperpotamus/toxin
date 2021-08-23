@@ -8,6 +8,7 @@
 @use "air-datepicker/dist/css/datepicker.css";
 @use "./blocks/datepicker/datepicker-toxin.scss";
 @use "./blocks/rate-button/rate-button.scss";
+@use 'nouislider/dist/nouislider.css';
 $height: 44px;
 
 .form-elements__box {
@@ -414,4 +415,10 @@ margin-right: 10px;
   padding-top: 11px;
   width: 260px;
   justify-content: space-between;  
+}
+
+// Range slider
+
+.range-slider {
+  
 }

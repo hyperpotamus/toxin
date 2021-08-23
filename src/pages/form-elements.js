@@ -2,13 +2,54 @@ import "../index.js";
 import { Dropdown } from "./blocks/dropdown/dropdown.js";
 import { RateButton } from "./blocks/rate-button/rate-button.js";
 import $ from "jquery";
+// import * as noUiSlider from 'nouislider/dist/nouislider.js';
 // globalThis.jQuery = $;
 globalThis.$ = $;
 // window.$ = window.jQuery = $;
 // window.$ = $;
 
+// .range-slider
+const noUiSlider=require('nouislider');
+const slider = document.querySelector(".range-slider");
+noUiSlider.create(slider, {
 
+  range: {
+      'min': 1000,
+      'max': 15000
+  },
 
+  step: 500,
+
+  // Handles start at ...
+  start: [5000, 10000],
+
+  // ... must be at least 300 apart
+  margin: 500,
+
+  // ... but no more than 600
+  // limit: 600,
+
+  // Display colored bars between handles
+  connect: true,
+
+  // Put '0' at the bottom of the slider
+  // direction: 'rtl',
+  // orientation: 'vertical',
+
+  // Move handle on tap, bars are draggable
+  // behaviour: 'tap-drag',
+  // tooltips: true,
+  // format: wNumb({
+  //     decimals: 0
+  // }),
+
+  // Show a scale with the slider
+  // pips: {
+  //     mode: 'steps',
+  //     stepped: true,
+  //     density: 4
+  // }
+});
 
 
 
@@ -27,7 +68,7 @@ const $dateTo = $dates.eq(1);
 const setArrows = () => {
   const $navBack=$(".datepickers-container .datepicker--nav-action[data-action='prev']");
   const $navFwd=$(".datepickers-container .datepicker--nav-action[data-action='next']");
-  console.log($navBack.html(),$navFwd.html());
+  // console.log($navBack.html(),$navFwd.html());
   $navBack.html('<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.1757 8.01562V9.98438H3.98819L9.56632 15.6094L8.16007 17.0156L0.144441 9L8.16007 0.984375L9.56632 2.39062L3.98819 8.01562H16.1757Z" fill="#BC9CFF"/></svg>');
   $navFwd.html('<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.36252 0.984375L16.3781 9L8.36252 17.0156L6.95627 15.6094L12.5344 9.98438H0.346894V8.01562H12.5344L6.95627 2.39062L8.36252 0.984375Z" fill="#BC9CFF"/></svg>');
 };
