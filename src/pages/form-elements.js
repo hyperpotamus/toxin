@@ -50,8 +50,16 @@ noUiSlider.create(slider, {
   //     density: 4
   // }
 });
+const valuesDivs = [
+  document.querySelector(".range-result-left"),
+  document.querySelector(".range-result-right")
+];
+slider.noUiSlider.on('update', function (values, handle) {
+  // console.log(typeof values[handle],values[handle] );
+  valuesDivs[handle].innerHTML = values[handle].split('.')[0];
+});
 
-
+//air-datepicker
 
 require('air-datepicker');
 // import "air-datepicker/dist/js/datepicker.js"
