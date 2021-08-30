@@ -7,7 +7,7 @@
 @use '../fonts/iconfont/iconfont.scss';
 @use "air-datepicker/dist/css/datepicker.css";
 @use "./blocks/datepicker/datepicker-toxin.scss";
-@use "./blocks/rate-button/rate-button.scss";
+// @use "./blocks/rate-button/rate-button.scss";
 @use 'nouislider/dist/nouislider.css';
 @use "./blocks/nouislider/nouislider" as toxin-nouislider;
 $height: 44px;
@@ -26,6 +26,10 @@ $height: 44px;
 }
 .element-box {
   margin-bottom: 20px;
+}
+.element-box_width_266 {
+  margin-bottom: 26px;
+  max-width: 266px;
 }
 .element-box_width_200 {
   margin-bottom: 20px;
@@ -64,8 +68,22 @@ $height: 44px;
 .element-box__caption_right {
   color: color.$dark_50;
 }
+.element-box__slider-values {
+  color: color.$dark_50;
+  padding-right: 3px;
+}
 .element-box__body {
   height: $height;
+  // display: flex;
+}
+.element-box__body_margin-bottom_40 {
+  height: $height;
+  margin-bottom: 40px;
+  // display: flex;
+}
+.element-box__body_padding-top_18 {
+  height: $height;
+  padding-top: 18px;
   // display: flex;
 }
 .date-dropdown {

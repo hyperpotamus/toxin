@@ -1,6 +1,8 @@
 extends ../layout/ui-kit
 include blocks/dropdown/dropdown
-include blocks/rate-button/rate-button
+include ../components/rate-button/rate-button
+//- blocks/rate-button/rate-button
+
 block title
   |Form Elements
 
@@ -133,18 +135,24 @@ block content
           +rate-button(4)
 
     .form-elements__column
-      .element-box 
+      .element-box_width_266
         .element-box__caption
           .element-box__caption_left
             h3 Range Slider
-          .element-box__caption_right
+          .element-box__slider-values
             h3 
               span.range-result-left 5 000
               span ₽ - 
               span.range-result-right 10 000
               span ₽
-      .element-box__body
-        .range-slider
+        .element-box__body_padding-top_18
+          .range-slider
+      .element-box_width_266
+        .element-box__caption_left
+          h3 buttons
+        .element-box__body
+          p qqq
+
       p.
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
 

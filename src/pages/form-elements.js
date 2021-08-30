@@ -1,6 +1,6 @@
 import "../index.js";
 import { Dropdown } from "./blocks/dropdown/dropdown.js";
-import { RateButton } from "./blocks/rate-button/rate-button.js";
+// import { RateButton } from "./blocks/rate-button/rate-button.js";
 import $ from "jquery";
 // import * as noUiSlider from 'nouislider/dist/nouislider.js';
 // globalThis.jQuery = $;
@@ -8,14 +8,30 @@ globalThis.$ = $;
 // window.$ = window.jQuery = $;
 // window.$ = $;
 
+// require("../components/rate-button/rate-button.scss");
+// require("../components/rate-button/rate-button.js");
+require("../components/**/*.scss");
+require("../components/**/*.js");
+
+
+// // src/index.js
+
+// function importAll(resolve) {
+//   resolve.keys().forEach(resolve);
+// }
+
+// importAll(require.context('../src/', true, /\.js$|\.scss$/));
+
+// Evgenii Popov @e_popov Все scss файлы и js файлы каталога src будут импорированы. И тогда не надо будет заморачиваться с подключение js и scss файлов к проекту. Webpack же должен упрощать жизнь, а не усложнять её) И не делайте точки входа на каждую страницу или если очень хочется, то когда доверстаете проект и тогда делайте если скажут на ревью.
+
 // .range-slider
 const noUiSlider=require('nouislider');
 const slider = document.querySelector(".range-slider");
 noUiSlider.create(slider, {
 
   range: {
-      'min': 1000,
-      'max': 15000
+      'min': 0,
+      'max': 16000
   },
 
   step: 500,
@@ -56,7 +72,7 @@ const valuesDivs = [
 ];
 slider.noUiSlider.on('update', function (values, handle) {
   // console.log(typeof values[handle],values[handle] );
-  valuesDivs[handle].innerHTML = values[handle].split('.')[0];
+  valuesDivs[handle].innerHTML = values[handle].split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 });
 
 //air-datepicker
@@ -143,13 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // const node = document.querySelector(".dropdown");
   // let myDropdown = new Dropdown(node);
 });
-
-//Rate buttons
-let myRates=[];
-const rates = document.querySelectorAll(".rate-button");
-rates.forEach ( (node)=>{
-  myRates.push(new RateButton(node));
-} );
 
 
 
