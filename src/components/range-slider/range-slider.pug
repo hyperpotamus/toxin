@@ -1,0 +1,13 @@
+mixin range-slider(label,from,to)
+  .range-slider
+    .element-box__caption
+      .element-box__caption_left
+        h3 #{label}
+      .element-box__slider-values
+        h3 
+          span.range-slider__result-from #{from}
+          span ₽ - 
+          span.range-slider__result-to #{to}
+          span ₽
+    .element-box__body_padding-top_18
+      .range-slider__body

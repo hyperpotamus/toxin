@@ -1,6 +1,7 @@
 extends ../layout/ui-kit
 include blocks/dropdown/dropdown
 include ../components/rate-button/rate-button
+include ../components/range-slider/range-slider
 //- blocks/rate-button/rate-button
 
 block title
@@ -136,17 +137,18 @@ block content
 
     .form-elements__column
       .element-box_width_266
-        .element-box__caption
-          .element-box__caption_left
-            h3 Range Slider
-          .element-box__slider-values
-            h3 
-              span.range-result-left 5 000
-              span ₽ - 
-              span.range-result-right 10 000
-              span ₽
-        .element-box__body_padding-top_18
-          .range-slider
+        +range-slider("Range Slider","5 000","10 000")
+        //- .element-box__caption
+        //-   .element-box__caption_left
+        //-     h3 Range Slider
+        //-   .element-box__slider-values
+        //-     h3 
+        //-       span.range-result-left 5 000
+        //-       span ₽ - 
+        //-       span.range-result-right 10 000
+        //-       span ₽
+        //- .element-box__body_padding-top_18
+        //-   .range-slider
       .element-box_width_266
         .element-box__caption_left
           h3 buttons

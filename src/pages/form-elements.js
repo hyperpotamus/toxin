@@ -24,56 +24,6 @@ require("../components/**/*.js");
 
 // Evgenii Popov @e_popov Все scss файлы и js файлы каталога src будут импорированы. И тогда не надо будет заморачиваться с подключение js и scss файлов к проекту. Webpack же должен упрощать жизнь, а не усложнять её) И не делайте точки входа на каждую страницу или если очень хочется, то когда доверстаете проект и тогда делайте если скажут на ревью.
 
-// .range-slider
-const noUiSlider=require('nouislider');
-const slider = document.querySelector(".range-slider");
-noUiSlider.create(slider, {
-
-  range: {
-      'min': 0,
-      'max': 16000
-  },
-
-  step: 500,
-
-  // Handles start at ...
-  start: [5000, 10000],
-
-  // ... must be at least 300 apart
-  margin: 500,
-
-  // ... but no more than 600
-  // limit: 600,
-
-  // Display colored bars between handles
-  connect: true,
-
-  // Put '0' at the bottom of the slider
-  // direction: 'rtl',
-  // orientation: 'vertical',
-
-  // Move handle on tap, bars are draggable
-  // behaviour: 'tap-drag',
-  // tooltips: true,
-  // format: wNumb({
-  //     decimals: 0
-  // }),
-
-  // Show a scale with the slider
-  // pips: {
-  //     mode: 'steps',
-  //     stepped: true,
-  //     density: 4
-  // }
-});
-const valuesDivs = [
-  document.querySelector(".range-result-left"),
-  document.querySelector(".range-result-right")
-];
-slider.noUiSlider.on('update', function (values, handle) {
-  // console.log(typeof values[handle],values[handle] );
-  valuesDivs[handle].innerHTML = values[handle].split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-});
 
 //air-datepicker
 
