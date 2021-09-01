@@ -1,4 +1,5 @@
-@use '../../../color';
+@use '../../color';
+@use "air-datepicker/dist/css/datepicker.css";
 
 .datepicker--cell.-current- {
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);

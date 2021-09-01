@@ -128,3 +128,12 @@ export class Dropdown {
     return sum;
   }
 }
+// const node = document.querySelector(".dropdown");
+// // console.log(node);
+// let myDropdown = new Dropdown(node);
+
+// new Dropdown(document.querySelector(".dropdown"));
+document.querySelectorAll(".dropdown").forEach ( (node)=>{
+  new Dropdown(node);
+} );
+
