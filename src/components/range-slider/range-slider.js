@@ -5,7 +5,12 @@ document.querySelectorAll(".range-slider").forEach((slider) => {
   // console.log(slider);
   const body=slider.querySelector(".range-slider__body");
   // console.log(body);
-
+  const valuesDivs = [
+    slider.querySelector(".range-slider__result-from"),
+    slider.querySelector(".range-slider__result-to")
+  ];
+  const values = valuesDivs.map(el=>el.textContent.replace(/\s+/g, ''));
+  // console.log(values);
   noUiSlider.create(body, {
 
     range: {
@@ -14,9 +19,10 @@ document.querySelectorAll(".range-slider").forEach((slider) => {
     },
   
     step: 500,
-  //TODO -get from html
+
     // Handles start at ...
-    start: [5000, 10000],
+    // start: [5000, 10000],
+    start: values,
   
     // ... must be at least 300 apart
     margin: 500,
@@ -46,10 +52,6 @@ document.querySelectorAll(".range-slider").forEach((slider) => {
     // }
   });
 
-  const valuesDivs = [
-    slider.querySelector(".range-slider__result-from"),
-    slider.querySelector(".range-slider__result-to")
-  ];
   // console.log(valuesDivs);
   body.noUiSlider.on('update', function (values, handle) {
     // console.log(typeof values[handle],values[handle] );

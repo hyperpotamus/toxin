@@ -5,3 +5,12 @@ $dark_25: rgba(31, 32, 65, 0.25);
 $dark_5: rgba(31, 32, 65, 0.05);
 $primary: rgba(188, 156, 255, 1);
 $secondary: rgba(111, 207, 151, 1);
+@mixin primary-gradient($attribute) {
+  #{$attribute}: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+@mixin primary-gradient-50($attribute) {
+  #{$attribute}: linear-gradient(180deg, #efe7ff 0%, #E3E9FE 100%);
+}
+@mixin secondary-gradient($attribute) {
+  #{$attribute}: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}

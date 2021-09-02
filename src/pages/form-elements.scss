@@ -30,6 +30,13 @@ $height: 44px;
 .element-box_width_266 {
   margin-bottom: 26px;
   max-width: 266px;
+  // display:flex;
+}
+.element-flex-box_width_266 {
+  margin-bottom: 26px;
+  max-width: 266px;
+  display:flex;
+  flex-wrap: wrap;
 }
 .element-box_width_200 {
   margin-bottom: 20px;
@@ -440,4 +447,93 @@ margin-right: 10px;
 
 .range-slider {
   
+}
+
+.button-box-99-44 {
+  width: 99px;
+  height: 44px;
+  margin: 10px 20px 20px 0px;
+  // padding: 10px 20px 20px 0px;
+}
+.button-box-320-44 {
+  width: 320px;
+  height: 44px;
+  margin: 10px 20px 20px 0px;
+
+  // padding: 10px 20px 20px 0px;
+}
+.button-box-2-99-44 {
+  padding: 12px 22px 22px 2px;
+}
+
+.button {
+  // width: 99px;
+  // height: 44px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  @include color.primary-gradient(background);
+  border-radius: 22px;
+}
+// .wrapper {
+//   width: 99px;
+//   height: 44px;
+//   color: white;
+//   border-radius: 22px;
+//   background: linear-gradient(#222, #222), 
+//               linear-gradient(to right, red, purple);
+//   background-origin: padding-box, border-box;
+//   background-repeat: no-repeat; /* this is important */
+//   border: 5px solid transparent;
+// }
+.button-2 {
+  width: 95px;
+  height: 40px;
+  color: color.$primary;
+  // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: white;
+  border-radius: 20px;
+  position: relative;
+}
+.button-2::after {
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+
+  content: '';
+  position: absolute;
+  top:-2px;
+  left:-2px;
+  // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  @include color.primary-gradient(background);
+  z-index: -1;
+}
+.button_hover {
+  opacity: 50%;
+}
+.button-2_hover::after {
+  @include color.primary-gradient-50(background);
+}
+.button-box-3 {
+  padding-top: 5px;
+padding-right: 20px;
+}
+.button-3 {
+  color: color.$primary;
+  background: white;
+}
+.button-3_hover {
+  color: color.$dark_50;
+}
+.button_payment {
+  position: relative;
+}
+.button_payment::after {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  font-family: iconfont;
+  font-size: 18px;
+  content: "\e900";
 }
