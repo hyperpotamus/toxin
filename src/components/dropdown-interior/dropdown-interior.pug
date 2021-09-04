@@ -1,0 +1,17 @@
+include __button/dropdown__button
+mixin menu-option(caption)
+  .dropdown__menu-option
+    h3 #{caption}
+    .dropdown__menu-option-controls
+      +dropdown__button(false,true)
+      h3 0
+      +dropdown__button(true,false)
+mixin dropdown-interior
+  .dropdown-interior
+    .dropdown__selection
+      p.dropdown__result Интерьер
+      p.icon-expand_more.dropdown__selection_arrow
+    .dropdown__menu.dropdown__menu_hidden
+      +menu-option("спальни")
+      +menu-option("кровати")
+      +menu-option("ванные комнаты")

@@ -2,6 +2,9 @@ extends ../layout/ui-kit
 include ../components/dropdown/dropdown
 include ../components/rate-button/rate-button
 include ../components/range-slider/range-slider
+include ../components/pagination/pagination
+include ../components/dropdown-interior/dropdown-interior
+include ../components/like-button/like-button
 //- blocks/rate-button/rate-button
 
 block title
@@ -81,9 +84,6 @@ block content
           h3 subscription text field
         .element-box__body
           input.input-string(type="emil",placeholder="Email",pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
-
-      p.
-        Русские буквы Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
     .form-elements__column
       .element-box 
         .element-box__caption_left
@@ -122,12 +122,14 @@ block content
         .element-box__caption_left
           h3 like button
         .like-list
-          label.like-label
-            input.input-like(type="checkbox")
-            .like-label-content 2
-          label.like-label
-            input.input-like(type="checkbox" checked="")
-            .like-label-content 12
+          +like-button(2,false)
+          +like-button(12,true)
+          //- label.like-label
+          //-   input.input-like(type="checkbox")
+          //-   .like-label-content 2
+          //- label.like-label
+          //-   input.input-like(type="checkbox" checked="")
+          //-   .like-label-content 12
       .element-box 
         .element-box__caption_left
           h3 Rate button
@@ -138,17 +140,6 @@ block content
     .form-elements__column
       .element-box_width_266
         +range-slider("Range Slider","5 000","10 000")
-        //- .element-box__caption
-        //-   .element-box__caption_left
-        //-     h3 Range Slider
-        //-   .element-box__slider-values
-        //-     h3 
-        //-       span.range-result-left 5 000
-        //-       span ₽ - 
-        //-       span.range-result-right 10 000
-        //-       span ₽
-        //- .element-box__body_padding-top_18
-        //-   .range-slider
       .element-box_width_266
         .element-box__caption_left
           h3 buttons
@@ -175,14 +166,59 @@ block content
         .button-box-320-44
           button.button.button_payment
             h3 перейти к оплате
+      .element-box_width_266
+        .element-box__caption_left
+          h3 pagination
+        .height-12
+        +pagination
+
+  .form-elements__box.form-elements__box_2
+    .form-elements__column
+      .element-box_width_266
+        .element-box__caption
+          .element-box__caption_left
+            h3 Dropdown
+          .element-box__caption_right
+            h3 Default
+        .element-box__body 
+          +dropdown-interior
+      .element-box_width_266
+        .element-box__caption
+          .element-box__caption_left
+            h3 Dropdown
+          .element-box__caption_right
+            h3 expanded
+        .element-box__body 
+          +dropdown-interior
 
       p.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ducimus aut natus quod? Possimus repellat nesciunt consequatur eligendi iste soluta molestias harum, nulla nobis deleniti quibusdam, quisquam exercitationem aut odit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptas vitae ex ipsum ullam exercitationem veniam id totam excepturi accusamus, qui delectus expedita voluptatem architecto laborum quam provident necessitatibus incidunt!
 
-  .form-elements__box
     .form-elements__column
+      .element-box 
+        .element-box__caption
+          .element-box__caption_left
+            h3 Dropdown
+          .element-box__caption_right
+            h3 
+        .element-box__body 
+          +dropdown
+
+      p.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptas vitae ex ipsum ullam exercitationem veniam id totam excepturi accusamus, qui delectus expedita voluptatem architecto laborum quam provident necessitatibus incidunt!
     .form-elements__column
-    .form-elements__column
+      .element-box 
+        .element-box__caption
+          .element-box__caption_left
+            h3 Dropdown
+          .element-box__caption_right
+            h3 
+        .element-box__body 
+          +dropdown
+
+      p.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptas vitae ex ipsum ullam exercitationem veniam id totam excepturi accusamus, qui delectus expedita voluptatem architecto laborum quam provident necessitatibus incidunt!
+
   .form-elements__box
     .form-elements__column
     .form-elements__column

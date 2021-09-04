@@ -1,0 +1,64 @@
+@use "../../color.scss";
+.input-like {
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  -o-appearance:none;
+  border: 1px solid color.$dark_25;
+box-sizing: border-box;
+border-radius: 10px;
+width: 40px;
+height: 20px;
+cursor: pointer;
+color: #fff;
+margin-right: 10px;
+}
+.input-like:checked {
+  border-color: color.$primary;
+}
+
+.like-label {
+  display: flex;
+  align-items:flex-start;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.like-label-content::before {
+  position: absolute;
+  left: -15px;
+  top: 0px;
+  // font-size: 10.5px;
+  padding-right: 7px;
+  padding-top: 0px;
+  color: color.$dark_25;
+  font-family: iconfont;
+  font-size: 10.4px;
+  line-height: 12px;
+  content: '\e904';
+  display: inline;
+}
+
+.input-like:checked + .like-label-content::before {
+  font-family: iconfont;
+  content: '\e903';
+  // Gradient
+  // background: -webkit-gradient(linear, right top, left bottom, from(#BC9CFF), to(#8BA4F9));
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
+}
+
+.like-label-content {
+  position: absolute;
+  color: color.$dark_25;
+  left: 20px;
+  top: 4px;
+  font-family: montserrat;
+  font-size: 8px;
+  line-height: 12px;
+}
+.input-like:checked + .like-label-content {
+  color: color.$primary;
+}

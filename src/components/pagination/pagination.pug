@@ -1,0 +1,24 @@
+mixin pagination()
+  .pagination-flex-box
+    - var i = 0;
+    .pagination-item
+      button.button 
+        h3 1
+    - i++;
+    while i<3
+      .pagination-item
+        button.button.background-white
+          h3= i+1
+      - i++;
+    .pagination-item
+      button.button.background-white
+        h3 ...
+    .pagination-item
+      button.button.background-white
+        h3 15
+    .pagination-item
+      button.button.background-secondary-gradient
+        h3.icon-arrow_forward.font-size-18
+  .pagination-flex-box
+    p.color-dark-75 1 – 12 из 100+ вариантов аренды
+

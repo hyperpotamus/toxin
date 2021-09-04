@@ -18,7 +18,9 @@ $height: 44px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
+.form-elements__box_2 {
+  margin-top: 100px;
+}
 .form-elements__column {
   max-width: 320px;
 }
@@ -30,8 +32,8 @@ $height: 44px;
 .element-box_width_266 {
   margin-bottom: 26px;
   max-width: 266px;
-  // display:flex;
 }
+
 .element-flex-box_width_266 {
   margin-bottom: 26px;
   max-width: 266px;
@@ -370,69 +372,6 @@ position: relative;
   // justify-content: space-between;
 }
 
-.input-like {
-  -moz-appearance:none;
-  -webkit-appearance:none;
-  -o-appearance:none;
-  border: 1px solid color.$dark_25;
-box-sizing: border-box;
-border-radius: 10px;
-width: 40px;
-height: 20px;
-color: #fff;
-margin-right: 10px;
-}
-.input-like:checked {
-  border-color: color.$primary;
-}
-
-.like-label {
-  display: flex;
-  align-items:flex-start;
-  position: relative;
-  margin-bottom: 14px;
-}
-
-.like-label-content::before {
-  position: absolute;
-  left: -15px;
-  top: 0px;
-  // font-size: 10.5px;
-  padding-right: 7px;
-  padding-top: 0px;
-  color: color.$dark_25;
-  font-family: iconfont;
-  font-size: 10.4px;
-  line-height: 12px;
-  content: '\e904';
-  display: inline;
-}
-
-.input-like:checked + .like-label-content::before {
-  font-family: iconfont;
-  content: '\e903';
-  // Gradient
-  // background: -webkit-gradient(linear, right top, left bottom, from(#BC9CFF), to(#8BA4F9));
-
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: initial;
-}
-
-.like-label-content {
-  position: absolute;
-  color: color.$dark_25;
-  left: 20px;
-  top: 4px;
-  font-family: montserrat;
-  font-size: 8px;
-  line-height: 12px;
-}
-.input-like:checked + .like-label-content {
-  color: color.$primary;
-}
-
 // Rate
 
 .rate-list {
@@ -472,6 +411,10 @@ margin-right: 10px;
   width: 100%;
   height: 100%;
   color: white;
+  // text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   @include color.primary-gradient(background);
   border-radius: 22px;
@@ -536,4 +479,34 @@ padding-right: 20px;
   font-family: iconfont;
   font-size: 18px;
   content: "\e900";
+}
+
+// pagination
+
+.pagination-item {
+  width: 40px;
+  height: 40px;
+}
+.background-secondary-gradient {
+  @include color.secondary-gradient(background);
+}
+.background-white {
+  background: white;
+  color: color.$dark_50;
+}
+.font-size-18 {
+  font-size: 18px;
+}
+.height-12{
+  height: 12px;
+}
+.pagination-flex-box {
+  margin-bottom: 8px;
+  width: 240px;
+  display:flex;
+  justify-content: center;
+  // flex-wrap: wrap;
+}
+.color-dark-75 {
+  color: color.$dark_75
 }

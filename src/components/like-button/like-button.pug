@@ -1,0 +1,7 @@
+mixin like-button(value,checked)
+  label.like-label
+    if checked
+      input.input-like(type="checkbox" checked="")
+    else
+      input.input-like(type="checkbox")
+    .like-label-content #{value}
